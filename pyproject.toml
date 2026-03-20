@@ -8,7 +8,6 @@ version = "0.1.0"
 description = "Interview transcription with speaker diarization and LLM post-processing"
 requires-python = ">=3.10"
 dependencies = [
-    "torch",
     "anthropic",
     "openai",
     "python-dotenv",
