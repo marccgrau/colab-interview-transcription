@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "interview-transcription"
+version = "0.1.0"
+description = "Interview transcription with speaker diarization and LLM post-processing"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "anthropic",
+    "openai",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/interview_transcription"]
