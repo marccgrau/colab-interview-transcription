@@ -31,15 +31,20 @@ HF_TOKEN=hf_...
 OPENAI_API_KEY=sk-...
 ```
 
-## Usage on Google Colab
+## Usage
+
+> **Important:** Run the notebook directly in Google Colab — it depends on Colab Secrets for API keys and Colab's GPU runtime. Other environments (VS Code, Jupyter) are not supported.
 
 Open `Interview_Transcription_Diarization.ipynb` in Colab and run the cells:
 
 ```python
-# 1. Install
+# 1. Install (runtime restarts automatically — re-run from step 2 after restart)
 !git clone https://github.com/marccgrau/colab-interview-transcription.git /content/interview-transcription
 %pip install whisperx
 %pip install -e /content/interview-transcription
+
+import IPython
+IPython.Application.instance().kernel.do_shutdown(True)
 
 # 2. Mount Google Drive
 from google.colab import drive
