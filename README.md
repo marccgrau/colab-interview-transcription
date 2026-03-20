@@ -33,7 +33,7 @@ OPENAI_API_KEY=sk-...
 
 ## Usage on Google Colab
 
-Open the notebook at `notebooks/Interview_Transcription_Diarization.ipynb` and run the cells:
+Open `Interview_Transcription_Diarization.ipynb` in Colab and run the cells:
 
 ```python
 # 1. Install
@@ -95,8 +95,7 @@ All options are set via the `Config` dataclass:
 │   ├── postprocess.py   # LLM transcript cleanup
 │   ├── format.py        # Output formatting (TXT, SRT, JSON, display)
 │   └── pipeline.py      # Pipeline orchestration
-├── notebooks/
-│   └── Interview_Transcription_Diarization.ipynb
+├── Interview_Transcription_Diarization.ipynb
 ├── pyproject.toml
 └── .env                 # secrets (not committed)
 ```
