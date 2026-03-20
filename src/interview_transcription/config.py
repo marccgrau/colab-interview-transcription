@@ -37,5 +37,5 @@ class Config:
             return self.llm_model
         return {
             "anthropic": "claude-sonnet-4-20250514",
-            "openai": "gpt-5.4",
+            "openai": "gpt-5.4-mini",
         }[self.llm_provider]
