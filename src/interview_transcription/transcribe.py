@@ -2,6 +2,7 @@ import os
 
 import torch
 import whisperx
+from whisperx.diarize import DiarizationPipeline
 
 
 def setup_device():
@@ -88,8 +89,8 @@ def align(audio, result, detected_language, device):
 def diarize(audio, result, cfg, hf_token, device):
     """Run speaker diarization with pyannote.audio. Returns updated result dict."""
     print("Running speaker diarization...")
-    diarize_model = whisperx.DiarizationPipeline(
-        use_auth_token=hf_token,
+    diarize_model = DiarizationPipeline(
+        token=hf_token,
         device=device,
     )
 
